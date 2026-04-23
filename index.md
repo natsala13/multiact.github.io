@@ -1,12 +1,24 @@
-# My Project
+---
+layout: default
+title: MultiAct
+---
 
-## Demo
-Check out the results.
+<div style="text-align: center; margin-top: 80px;">
 
-## Paper
-[PDF](https://arxiv.org/abs/2406.06508)
+# MultiAct
 
-## Code
-[GitHub](git@github.com:natsala13/multiact.git)
+### Multi-action video generation / understanding system
 
-# TEST 123
+<br>
+
+<a href="https://arxiv.org" target="_blank">📄 ArXiv</a> |
+<a href="https://github.com" target="_blank">💻 GitHub</a>
+
+<br><br>
+
+<iframe width="720" height="405"
+src="https://www.youtube.com/embed/VIDEO_ID"
+frameborder="0" allowfullscreen>
+</iframe>
+
+</div>
