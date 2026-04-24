@@ -322,147 +322,94 @@
             </div>
             <div class="content">
                 <p>
-                    MultiAct is built to handle complex prompts that combine multiple actions, spatial modifiers, and style elements.
-                    The examples below illustrate how the framework maintains grounded semantics and strong prompt coverage, even when several motion components must coexist.
+                    MultiAct is built to handle prompts that combine multiple simultaneous actions and modifiers.
+                    The examples below show three representative prompts, each comparing the baseline, MultiAct, and an additional comparison output.
+                </p>
+            </div>
+
+            <div class="content">
+                <h3 class="title is-4">Dribbling while moving backward</h3>
+                <p>Prompt: <em>a person dribbles a ball while moving backward</em>. Baseline misses motion coherence, while MultiAct captures both dribbling and backward locomotion.</p>
+            </div>
+            <div class="columns is-centered is-multiline">
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_dribbles_a_ball_while_moving_backward_BaseLine.mp4" type="video/mp4">
+                    </video>
+                    <p><b>Baseline</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_dribbles_a_ball_while_moving_backward_MultiAct.mp4" type="video/mp4">
+                    </video>
+                    <p><b>MultiAct</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_dribbles_a_ball_while_moving_backward_STMC.mp4" type="video/mp4">
+                    </video>
+                    <p><b>STMC</b></p>
+                </div>
+            </div>
+
+            <div class="content">
+                <h3 class="title is-4">Hopping forward while raising arms</h3>
+                <p>Prompt: <em>a person hops forward while raising arms</em>. This example requires coordinated leg and arm motion; MultiAct preserves both simultaneously.</p>
+            </div>
+            <div class="columns is-centered is-multiline">
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_hop_forward_while_raising_arms_BaseLine.mp4" type="video/mp4">
+                    </video>
+                    <p><b>Baseline</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_hop_forward_while_raising_arms_MultiAct.mp4" type="video/mp4">
+                    </video>
+                    <p><b>MultiAct</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_hop_forward_while_raising_arms_All.mp4" type="video/mp4">
+                    </video>
+                    <p><b>All</b></p>
+                </div>
+            </div>
+
+            <div class="content">
+                <h3 class="title is-4">Running while waving arms</h3>
+                <p>Prompt: <em>a person is running while waving his arms</em>. MultiAct better captures both the running rhythm and the arm motion than the baseline variant.</p>
+            </div>
+            <div class="columns is-centered is-multiline">
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_is_running_while_waving_his_arms_BaseLine.mp4" type="video/mp4">
+                    </video>
+                    <p><b>Baseline</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_is_running_while_waving_his_arms_MultiAct.mp4" type="video/mp4">
+                    </video>
+                    <p><b>MultiAct</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/Embedded Videos/a_person_is_running_while_waving_his_arms_STMC.mp4" type="video/mp4">
+                    </video>
+                    <p><b>STMC</b></p>
+                </div>
+            </div>
+
+            <div class="content">
+                <p>
+                    These three prompt examples demonstrate MultiAct’s ability to preserve multiple simultaneous actions across challenging composite descriptions.
                 </p>
             </div>
         </div>
     </div>
 </section>
-<!-- Spatial Editing -->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered is-four-fifths">
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/raise_hands/raise_leader.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><b>Leader</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/raise_hands/raise_follower.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Follower</b></p>
-                </div>
-                <!-- <div class="column is-centered has-text-centered"> -->
-                <div class="column is-centered has-text-centered">
-                        <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/raise_hands/raise_out_leader.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Output</b> (vs. Leader)</p>
-                </div>
-            </div>
-            <p><b>Spatial Editing</b>, is where specific joints, like the arms, are edited, while the overall motion is preserved.
-            </p>
-        </div>
-    </div>
-</section>
-<!-- Action Transfer-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered is-four-fifths">
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/crawl/leader.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><b>Leader</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/crawl/crawl_follower.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Follower</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                        <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/crawl/crawl.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Output</b> (vs. Leader)</p>
-                </div>
-            </div>
-            <p><b>Action Composition</b> highlights how MultiAct can satisfy multiple, distinct motion constraints in a single generated sequence.
-                The output captures the combined semantics of the prompt while maintaining a coherent overall motion.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Style Transfer-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered is-four-fifths">
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_walk/leader.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><b>Leader</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_walk/monkey_follower.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Follower</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                        <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_walk/monkey_fix.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Output</b> (vs. Leader)</p>
-                </div>
-            </div>
-            <p><b>Style Transfer</b> refers to doing a given motion in a different way that reflects a change in style or expression, such as ``happily'' or ``energetically.''
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- OOD-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered is-four-fifths">
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_dance/gorilla_dance_leader.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><b>Leader</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_dance/gorilla_dance_follower.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Follower</b></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                        <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/monkey_dance/gorilla_dance.mp4"
-                                    type="video/mp4">
-                    </video>
-                    <p><b>Output</b> (vs. Leader)</p>
-                </div>
-            </div>
-            <p><b>Out-of-distribution synthesis</b> demonstrates MultiAct's ability to generate rare or unusual motion combinations from composite prompts.
-                The framework amplifies weak prompt components so the resulting motion better matches all specified behaviors, even when the backbone's default output may miss details.
-            </p>
-        </div>
-    </div>
-</section>
-
 
 <!-- Inversion -->
 <section class="hero is-small is-light">
