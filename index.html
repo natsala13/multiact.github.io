@@ -266,12 +266,12 @@
 </section>
 
 
-<!-- Understanding Self-Attention -->
+<!-- Understanding Cross-Attention -->
 <section class="hero is-small ">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="content has-text-centered">
-                <h2 class="title is-3">Understanding Self-Attention Features</h2>
+                <h2 class="title is-3">Diving into Cross-Attention Features</h2>
             </div>
             <div class="content">
                 <p>
@@ -286,31 +286,19 @@
 <section class="hero is-small ">
     <div class="hero-body">
         <div class="container is-max-desktop">
-             <div class="columns is-centered is-four-fifths">
-                <div class="column is-centered ">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/QK/Key.mov"
-                                type="video/mp4">
-                    </video>
-                    <p>When clustering key features, their unique motifs, such as ‘standing’, ‘walking’ or ‘turning’ are grouped into different clusters.
-                    </p>
-                </div>
-                <div class="column is-centered">
-                    <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                        <source src="media/videos/QK/Query.mov"
-                                    type="video/mp4">
-                    </video>
-                    <p>When clustering query features, periodic steps are grouped together, indicating a dominance of outline features, such as locomotion phases, 
-                        <!-- and of temporal information,  -->
-                        over their unique motifs.
-                    </p>
-                </div>
+            <div class="content has-text-centered">
+                <h2 class="title is-3">Cross Attention Visualization</h2>
             </div>
-            <br>
-            <br>
-
             <div class="column is-centered has-text-centered">
-                <img src="media/figures/nn.jpg" width="60%">
+                <embed src="media/multiact_figures/AttentionScore.pdf" type="application/pdf" width="60%" height="480px" />
+                <p>Attention score visualization in MultiAct.</p>
+            </div>
+            <div class="column is-centered has-text-centered" style="margin-top: 2rem;">
+                <video poster="" id="tree" playsinline autoplay muted loop width="100%">
+                    <source src="media/multiact_videos/Cross_Attention_Score_Comp.mp4"
+                            type="video/mp4">
+                </video>
+                <p>Cross attention score comparison video.</p>
             </div>
             <div class="content">
                 <p><b>Correspondence via attention.</b>
