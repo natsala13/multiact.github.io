@@ -149,26 +149,6 @@
     </div>
 </section>
 
-
-<!-- <section class="hero teaser">
-    <div class="container is-max-desktop">
-        <div class="hero-body">
-
-            <div class="column is-centered has-text-centered">
-                  <img src="media/figures/teaser_fp_short.jpg" alt="Motion Transfer" width="80%">
-            </div>
-            <h2 class="subtitle has-text-justified">
-                <b>Motion transfer.</b> The top row displays a leader performing a walking motion. The left column showcases sample frames of four followers, each engaged in a different motion. 
-                The central block presents the output motion, where the outline of the leader's motion (e.g., leading leg) is transferred to the followers and integrated with their distinct motifs. 
-                Note the alignment of the steps for the leader and the output motions.  
-                Our motion transfer is conducted by manipulating self-attention latent features in a zero-shot fashion.
-            </h2>
-
-        </div>
-    </div>
-</section> -->
-
-
 <!-- Video + Abstract -->
 <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -231,14 +211,14 @@
                     <source src="media/multiact_videos/Embedded Videos/a_person_dribbles_a_ball_while_moving_backward_BaseLine.mp4"
                     type="video/mp4">
                 </video>
-                <p><b>Leader</b></p>
+                <p><b>Baseline</b></p>
             </div>
             <div class="column is-centered has-text-centered">
                 <video poster="" id="tree" playsinline autoplay muted loop width="100%">
                     <source src="media/multiact_videos/Embedded Videos/a_person_dribbles_a_ball_while_moving_backward_MultiAct.mp4"
                                 type="video/mp4">
                 </video>
-                <p><b>Follower</b></p>
+                <p><b>MultiAct</b></p>
             </div>
         </div>
         <p>In the example above, the left video shows the baseline failing to execute both actions together, while the right video shows MultiAct successfully generating a person dribbling a ball while walking backwards.</p>
@@ -301,12 +281,8 @@
                 <p>Cross attention score comparison video.</p>
             </div>
             <div class="content">
-                <p><b>Correspondence via attention.</b>
-                    Follower frames are color-coded according to consecutive indices (top row). 
-                    Nearest neighbor follower frames (bottom) are the ones that achieve the highest mixed-attention ( \( Q^{\text{ldr}} \cdot K^{\text{flw}^T} \) ) activation, 
-                    shown respectively to leader's frames (middle row).
-                    As shown, these correspondences are semantically aligned, e.g., moving ``up'' and ``down'' sub-motions are consistently assigned with follower moving ``up'' and ``down'' frames. 
-                    Some of the nearest neighbors are highlighted with arrows.
+                <p><b>Attention visualization.</b>
+                    The colored heatmaps illustrate attention scores for the words “forward” (yellow) and “arms” (green). Our backbone assigns low attention to arm-related tokens, resulting in motions in which the arms are not raised. In contrast, our method assigns high attention scores to both tokens, producing a synchronized motion that faithfully reflects the prompt.
                 </p>
             </div>
         </div>
