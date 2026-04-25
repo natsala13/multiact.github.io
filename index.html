@@ -230,8 +230,8 @@
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="content has-text-centered">
-                <h2 class="title is-3">Pipeline</h2>
-                <img src="media/multiact_figures/guided_gen.png" style="height:auto; max-width:760px;" alt="MultiAct pipeline" />
+                <h2 class="title is-3">Attention Guided Generation</h2>
+                <img src="media/multiact_figures/guided_gen.png" style="height:auto; max-width:660px;" alt="MultiAct pipeline" />
             </div>
             <div class="content">
                 <p>
@@ -273,12 +273,19 @@
                 <img src="media/multiact_figures/AttentionScore.png" alt="Attention score visualization in MultiAct" style="height:auto; max-width:760px;" />
                 <p>Attention score visualization in MultiAct.</p>
             </div>
-            <div class="column is-centered has-text-centered" style="margin-top: 2rem;">
-                <video poster="" id="tree" playsinline autoplay muted loop width="100%">
-                    <source src="media/multiact_videos/Cross_Attention_Score_Comp.mp4"
-                            type="video/mp4">
-                </video>
-                <p>Cross attention score comparison video.</p>
+            <div class="columns is-centered" style="margin-top: 2rem;">
+                <div class="column is-half has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/ca_score_part1.mp4" type="video/mp4">
+                    </video>
+                    <p><b>MDM*</b></p>
+                </div>
+                <div class="column is-half has-text-centered">
+                    <video poster="" playsinline autoplay muted loop width="100%">
+                        <source src="media/multiact_videos/ca_score_part2.mp4" type="video/mp4">
+                    </video>
+                    <p><b>MultiAct</b></p>
+                </div>
             </div>
             <div class="content">
                 <p><b>Attention visualization.</b>
